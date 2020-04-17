@@ -26,27 +26,32 @@ const Email: React.FC = () => {
     }),
   );
   const classes = useStyles();
-  const [enName, setEnName] = React.useState("Joseph Phua");
-  const [chName, setChName] = React.useState("潘杰賢");
+  const [enName, setEnName] = React.useState("Xiaoming Wang");
+  const [chName, setChName] = React.useState("王小明");
   const [mobile, setMobile] = React.useState("+886-909-090-999");
-  const [email, setEmail] = React.useState("joseph@17.media");
+  const [email, setEmail] = React.useState("xiaomingwang@17.media");
   const [telephone, setTelephone] = React.useState("+886-2-2720-8688 #123");
   const [organization, setOrganization] = React.useState('HQ');
   const [companyName, setCompanyName] = React.useState('M17 Entertainment');
   const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
-  const [position, setPosition] = React.useState('CEO');
-  const [mobileStr, setMobileString] = React.useState(`<strong><span style="color: #073763;">M</span>&nbsp;</strong><span style="color: #666666;">${mobile}</span>
-  <strong><span style="color: #073763;">｜</strong>`)
+  const [position, setPosition] = React.useState('Engineer');
+  const [mobileStr, setMobileString] = React.useState(`<strong><span style="color: #073763;">M</span>&nbsp;</strong>
+  <span style="color: #666666;">${mobile}</span><strong><span style="color: #073763;">｜</span></strong>`);
+  
   const template = `<div><p><span style="color: #073763; font-size: large;"><b>${enName}&nbsp;</b>${chName}</span></p>
-    <p><span style="color: #3d85c6;">${companyName}｜${position}</span></p>
-    <p>&nbsp;</p>
-    <p>${mobileStr}<strong>T</span>&nbsp;</strong><span style="color: #666666;">${telephone}</span>
-    <b><span style="color: #073763;">｜E</span>&nbsp;</b><span style="color: #666666;">${email}</span></p>
-    <p><span style="font-weight: bold; color: #073763;">Follow us:</span><b>&nbsp;</b><span style="color: #3d85c6;">
-    <a href="https://m17.asia/" data-saferedirecturl="https://www.google.com/url?q=https://m17.asia&amp;source=gmail&amp;ust=1587028657631000&amp;usg=AFQjCNFuJsK6PQvixppbPt48vuYbZ7UjuA">M17 Entertainment</a></span></p>
-    <p><img src=${companyLogo} alt="" width="420" height="70" style="font-weight: bold;" /></p>
-    <p><strong><span style="color: #000000; font-size: large;">Empower Artists. Entertain the World.</span></strong></p>
-    </div>`;
+  <p><span style="color: #3d85c6;">${companyName}｜${position}</span></p>
+  <p>&nbsp;</p><p>${mobileStr}
+  <strong><span style="color: #073763;">T</span>&nbsp;</strong>
+  <span style="color: #666666;">${telephone}</span>
+  <strong><span style="color: #073763;">｜</span></strong>
+  <strong><span style="color: #073763;">E</span>&nbsp;</strong>
+  <span style="color: #666666;">${email}</span>
+  </p><p>
+  <span style="font-weight: bold; color: #073763;">Follow us:</span><b>&nbsp;</b>
+  <span style="color: #3d85c6;"> <a href="https://m17.asia/" data-saferedirecturl="https://www.google.com/url?q=https://m17.asia&amp;source=gmail&amp;ust=1587028657631000&amp;usg=AFQjCNFuJsK6PQvixppbPt48vuYbZ7UjuA">M17 Entertainment</a></span>
+  </p>
+  <p><img src=${companyLogo} alt="" width="420" height="70" style="font-weight: bold;" /></p>
+  <p><strong><span style="color: #000000; font-size: large;">Empower Artists. Entertain the World.</span></strong></p></div>`;
   function onDataChange(e: any) {
     const target:HTMLInputElement = e.target;
     switch (target.id) {
@@ -65,8 +70,8 @@ const Email: React.FC = () => {
       case 'mobile':
         setMobile(target.value);
         if (target.value)
-          setMobileString(`<strong><span style="color: #073763;">M</span>&nbsp;</strong><span style="color: #666666;">${mobile}</span>
-          <strong>`);
+          setMobileString(`<strong><span style="color: #073763;">M</span>&nbsp;</strong>
+          <span style="color: #666666;">${target.value}</span><strong><span style="color: #073763;">｜</span></strong>`);
         else
           setMobileString('');
         break;
@@ -147,7 +152,7 @@ const Email: React.FC = () => {
   };
   return (
     <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <div id="emailSignature" className="editor" dangerouslySetInnerHTML={{__html: template}}/>
         <div>
           <Button variant="contained" color="primary" onClick={copyTextToClipboard}>
@@ -155,7 +160,7 @@ const Email: React.FC = () => {
           </Button>
         </div>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <div className="item-margin">
           <FormControl fullWidth={true}>
             <InputLabel htmlFor="my-input">英文全名 EN Full Name</InputLabel>
