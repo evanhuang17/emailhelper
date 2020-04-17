@@ -35,23 +35,35 @@ const Email: React.FC = () => {
   const [companyName, setCompanyName] = React.useState('M17 Entertainment');
   const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
   const [position, setPosition] = React.useState('Engineer');
-  const [mobileStr, setMobileString] = React.useState(`<strong><span style="color: #073763;">M</span>&nbsp;</strong>
-  <span style="color: #666666;">${mobile}</span><strong><span style="color: #073763;">｜</span></strong>`);
+  const [mobileStr, setMobileString] = React.useState(`<span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
+  <font color="#000000">M&nbsp;</font><font color="#666666">${mobile}</font></span><span style="border:1pt none windowtext;padding:0cm">｜</span>`);
   
-  const template = `<div><p><span style="color: #073763; font-size: large;"><b>${enName}&nbsp;</b>${chName}</span></p>
-  <p><span style="color: #3d85c6;">${companyName}｜${position}</span></p>
-  <p>&nbsp;</p><p>${mobileStr}
-  <strong><span style="color: #073763;">T</span>&nbsp;</strong>
-  <span style="color: #666666;">${telephone}</span>
-  <strong><span style="color: #073763;">｜</span></strong>
-  <strong><span style="color: #073763;">E</span>&nbsp;</strong>
-  <span style="color: #666666;">${email}</span>
-  </p><p>
-  <span style="font-weight: bold; color: #073763;">Follow us:</span><b>&nbsp;</b>
-  <span style="color: #3d85c6;"> <a href="https://m17.asia/" data-saferedirecturl="https://www.google.com/url?q=https://m17.asia&amp;source=gmail&amp;ust=1587028657631000&amp;usg=AFQjCNFuJsK6PQvixppbPt48vuYbZ7UjuA">M17 Entertainment</a></span>
-  </p>
-  <p><img src=${companyLogo} alt="" width="420" height="70" style="font-weight: bold;" /></p>
-  <p><strong><span style="color: #000000; font-size: large;">Empower Artists. Entertain the World.</span></strong></p></div>`;
+  const template = `<div><span class="im"><p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif">
+  <font size="4" color="#073763"><span lang="EN-US" style="font-family:Calibri,sans-serif"><b>${enName}&nbsp;</b></span><b>${chName}</b></font>
+  <font size="3"><span lang="EN-US" style="font-family:Calibri,sans-serif"></span></font></p>
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><font color="#3d85c6">
+  <span lang="EN-US" style="font-family:Calibri,sans-serif">${companyName}</span>
+  <span style="border:1pt none windowtext;padding:0cm">｜</span>
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">${position}</span></font>
+  <font size="4"><span lang="EN-US" style="font-size:13.5pt;border:1pt none windowtext;padding:0cm"></span></font></p>
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size:12pt;font-family:新細明體,serif">
+  <span lang="EN-US" style="font-size:13.5pt;font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">&nbsp;</span></p>
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>${mobileStr}
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">T&nbsp;</span>
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm"><font color="#666666">${telephone}</font></span>
+  <span style="border:1pt none windowtext;padding:0cm">｜</span>
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm"><font color="#000000">E&nbsp;</font><a>
+  <font color="#666666">${email}</font></a></span></b><font size="3"><span lang="EN-US" style="font-family:Calibri,sans-serif"></span></font></p>
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
+  <font color="#073763">Follow us:&nbsp;</font><font color="#666666"><a href="https://m17.asia/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://m17.asia/&amp;source=gmail&amp;ust=1587185788512000&amp;usg=AFQjCNHlhU0d6fJ9GUV7k2BYddWY1n_Iog">M17 Entertainment</a></font></span></b></p>
+  </span>
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>
+  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
+  <img src="${companyLogo}" width="420" height="66" class="CToWUd"><br></span></b></p><span class="im">
+  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b><span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">Empower Artists. Entertain the World.</span></b>
+  </p></span>
+</div>`;
   function onDataChange(e: any) {
     const target:HTMLInputElement = e.target;
     switch (target.id) {
@@ -70,8 +82,8 @@ const Email: React.FC = () => {
       case 'mobile':
         setMobile(target.value);
         if (target.value)
-          setMobileString(`<strong><span style="color: #073763;">M</span>&nbsp;</strong>
-          <span style="color: #666666;">${target.value}</span><strong><span style="color: #073763;">｜</span></strong>`);
+          setMobileString(`<span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
+          <font color="#000000">M&nbsp;</font><font color="#666666">${target.value}</font></span><span style="border:1pt none windowtext;padding:0cm">｜</span>`);
         else
           setMobileString('');
         break;
