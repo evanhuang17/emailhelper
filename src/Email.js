@@ -30,7 +30,7 @@ const Email: React.FC = () => {
   const [chName, setChName] = React.useState("王小明");
   const [mobile, setMobile] = React.useState("+886-909-090-999");
   const [email, setEmail] = React.useState("xiaomingwang@17.media");
-  const [telephone, setTelephone] = React.useState("+886-2-2720-8688 #123");
+  const [telephone, setTelephone] = React.useState("+866-2-2327-8122 #123");
   const [organization, setOrganization] = React.useState('HQ');
   const [companyName, setCompanyName] = React.useState('M17 Entertainment');
   const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
@@ -39,7 +39,7 @@ const Email: React.FC = () => {
   <font color="#000000">M&nbsp;</font><font color="#666666">${mobile}</font></span><span style="border:1pt none windowtext;padding:0cm">｜</span>`);
   
   const template = `<div><span class="im"><p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif">
-  <font size="4" color="#073763"><span lang="EN-US" style="font-family:Calibri,sans-serif"><b>${enName}&nbsp;</b></span><b>${chName}</b></font>
+  <font size="4" color="#073763"><span lang="EN-US" style="font-family:Calibri,sans-serif"><b>${enName}&nbsp;</b></span><b style="font-family:verdana,sans-serif">${chName}</b></font>
   <font size="3"><span lang="EN-US" style="font-family:Calibri,sans-serif"></span></font></p>
   <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><font color="#3d85c6">
   <span lang="EN-US" style="font-family:Calibri,sans-serif">${companyName}</span>
