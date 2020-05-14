@@ -35,34 +35,30 @@ const Email: React.FC = () => {
   const [companyName, setCompanyName] = React.useState('M17 Entertainment');
   const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
   const [position, setPosition] = React.useState('Engineer');
-  const [mobileStr, setMobileString] = React.useState(`<span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
-  <font color="#000000">M&nbsp;</font><font color="#666666">${mobile}</font></span><span style="border:1pt none windowtext;padding:0cm">｜</span>`);
+  const [mobileStr, setMobileString] = React.useState(`<b style="color:rgb(7,55,99)">M </b><font color="#666666">${mobile}</font>
+  <b style="color:rgb(7,55,99)"> </b><span style="color:rgb(7,55,99)">|</span>`);
   
-  const template = `<div><span class="im"><p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif">
-  <font size="4" color="#073763"><span lang="EN-US" style="font-family:Calibri,sans-serif"><b>${enName}&nbsp;</b></span><b style="font-family:verdana,sans-serif">${chName}</b></font>
-  <font size="3"><span lang="EN-US" style="font-family:Calibri,sans-serif"></span></font></p>
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><font color="#3d85c6">
-  <span lang="EN-US" style="font-family:Calibri,sans-serif">${companyName}</span>
-  <span style="border:1pt none windowtext;padding:0cm">｜</span>
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">${position}</span></font>
-  <font size="4"><span lang="EN-US" style="font-size:13.5pt;border:1pt none windowtext;padding:0cm"></span></font></p>
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size:12pt;font-family:新細明體,serif">
-  <span lang="EN-US" style="font-size:13.5pt;font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">&nbsp;</span></p>
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>${mobileStr}
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">T&nbsp;</span>
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm"><font color="#666666">${telephone}</font></span>
-  <span style="border:1pt none windowtext;padding:0cm">｜</span>
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm"><font color="#000000">E&nbsp;</font><a>
-  <font color="#666666">${email}</font></a></span></b><font size="3"><span lang="EN-US" style="font-family:Calibri,sans-serif"></span></font></p>
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
-  <font color="#073763">Follow us:&nbsp;</font><font color="#666666"><a href="https://m17.asia/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://m17.asia/&amp;source=gmail&amp;ust=1587185788512000&amp;usg=AFQjCNHlhU0d6fJ9GUV7k2BYddWY1n_Iog">M17 Entertainment</a></font></span></b></p>
-  </span>
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b>
-  <span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
-  <img src="${companyLogo}" width="420" height="66" class="CToWUd"><br></span></b></p><span class="im">
-  <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-family:新細明體,serif"><b><span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">Empower Artists. Entertain the World.</span></b>
-  </p></span>
+  const template = `<div style="font-family:Arial,Helvetica,sans-serif">
+  <div dir="ltr">
+     <font style="font-size:18px;" color="#073763" size="4"><b>${enName} </b>${chName}</font><br>
+     <font color="#3d85c6" style="font-size: 13px;"> ${companyName} | ${position}<br><br></font>
+  </div>
+  <div style="font-size: 13px;">${mobileStr}<b style="color:rgb(7,55,99)"> T </b>
+     <font color="#666666">${telephone}</font><font color="#444444">&nbsp;</font><span style="color:rgb(7,55,99)">|</span><b style="color:rgb(7,55,99)"> E </b><font color="#666666">${email}</font><br>
+     <b style="color:rgb(7,55,99)">Follow us : </b><a href="https://www.m17.asia/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.m17.asia/&amp;source=gmail&amp;ust=1589363511983000&amp;usg=AFQjCNHQiHJ6lxRFkz44RyIixkuEyj-27w">
+     <font color="#3d85c6">M17 Entertainment</font></a>
+  </div>
+  <div><font color="#000000"><img src="${companyLogo}" width="420" height="70" class="CToWUd"></font><br><font color="#000000"><b><span lang="EN-US" style="font-size:18px">Empower Artists. Entertain the World.</span></b></font><br></div>
+  <div>
+     <br>
+     <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size: 10px;">
+        <span style="color:#666666;"><span>本信件及附件內容可能為機密性資料，若您並非被指定之收信人或在任何原因未經授權的情形之下收到本信件，請勿揭曉本信件內容於任何人，並請告知原發信人，以及請從您的電腦刪除此信件和任何已列印的文件。謝謝您的合作。</span>
+     </p>
+     <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size: 10px;"><span style="color:#666666;"><span lang="EN-US" style="border:1pt none windowtext;padding:0cm;">
+        CONFIDENTIALITY NOTICE:This electronic message and any attachments may be confidential. If you are not the intended recipient, please do not disclose the contents to anyone,and notify the sender by e-mail; delete the message and destroy all printed hard copies. Thank you for your cooperation.
+        </span>
+     </p>
+  </div>
 </div>`;
   function onDataChange(e: any) {
     const target:HTMLInputElement = e.target;
@@ -82,8 +78,8 @@ const Email: React.FC = () => {
       case 'mobile':
         setMobile(target.value);
         if (target.value)
-          setMobileString(`<span lang="EN-US" style="font-family:Calibri,sans-serif;border:1pt none windowtext;padding:0cm">
-          <font color="#000000">M&nbsp;</font><font color="#666666">${target.value}</font></span><span style="border:1pt none windowtext;padding:0cm">｜</span>`);
+          setMobileString(`<b style="color:rgb(7,55,99)">M </b><font color="#666666">${target.value}</font>
+          <b style="color:rgb(7,55,99)"> </b><span style="color:rgb(7,55,99)">|</span>`);
         else
           setMobileString('');
         break;
@@ -104,15 +100,15 @@ const Email: React.FC = () => {
         break;
       case 'TW':
         setCompanyName('17Media Taiwan');
-        setCompanyLogo('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
+        setCompanyLogo('https://cdn.17app.co/cd4ca6e5-36d4-435b-9e8c-b74820a9ef0b.png');
         break;
       case 'JP':
         setCompanyName('17Media Japan');
-        setCompanyLogo('https://cdn.17app.co/a8ee230d-8d05-4138-baff-d71c0ee6f10d.png');
+        setCompanyLogo('https://cdn.17app.co/92af0f49-db84-427d-835f-65d79e59d367.png');
         break;
       case 'US':
         setCompanyName('17Media US');
-        setCompanyLogo('https://cdn.17app.co/32de5de6-a034-4b1e-8342-882210b8aa70.png');
+        setCompanyLogo('https://cdn.17app.co/8319412a-9e3a-4886-b946-8be534bfc989.png');
         break;
       case 'Wave':
         setCompanyName('Wave');
