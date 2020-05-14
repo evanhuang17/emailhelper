@@ -99,15 +99,15 @@ const Email: React.FC = () => {
         setCompanyLogo('https://cdn.17app.co/e9a2f146-8f3f-4163-ba4f-dc10d2f84ccd.png');
         break;
       case 'TW':
-        setCompanyName('17Media Taiwan');
+        setCompanyName('17LIVE Taiwan');
         setCompanyLogo('https://cdn.17app.co/cd4ca6e5-36d4-435b-9e8c-b74820a9ef0b.png');
         break;
       case 'JP':
-        setCompanyName('17Media Japan');
+        setCompanyName('17LIVE Japan');
         setCompanyLogo('https://cdn.17app.co/92af0f49-db84-427d-835f-65d79e59d367.png');
         break;
       case 'US':
-        setCompanyName('17Media US');
+        setCompanyName('17LIVE US');
         setCompanyLogo('https://cdn.17app.co/8319412a-9e3a-4886-b946-8be534bfc989.png');
         break;
       case 'Wave':
@@ -211,9 +211,9 @@ const Email: React.FC = () => {
               onChange={onOrgChange}
             >
               <MenuItem value="HQ">HQ</MenuItem>
-              <MenuItem value="TW">17Media Taiwan</MenuItem>
-              <MenuItem value="JP">17Media Japan</MenuItem>
-              <MenuItem value="US">17Media US</MenuItem>
+              <MenuItem value="TW">17LIVE Taiwan</MenuItem>
+              <MenuItem value="JP">17LIVE Japan</MenuItem>
+              <MenuItem value="US">17LIVE US</MenuItem>
               <MenuItem value="HandsUP">HandsUP</MenuItem>
               <MenuItem value="Wave">Wave</MenuItem>
               <MenuItem value="Unicorn">Unicorn Entertainment</MenuItem>
