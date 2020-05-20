@@ -30,34 +30,36 @@ const Email: React.FC = () => {
   const [chName, setChName] = React.useState("王小明");
   const [mobile, setMobile] = React.useState("+886-909-090-999");
   const [email, setEmail] = React.useState("xiaomingwang@17.media");
-  const [telephone, setTelephone] = React.useState("+866-2-2327-8122 #123");
+  const [telephone, setTelephone] = React.useState("+866-2-2327-8989 #123");
   const [organization, setOrganization] = React.useState('HQ');
   const [companyName, setCompanyName] = React.useState('M17 Entertainment');
-  const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/8e561b95-281a-4106-8ccf-cb0682c4ead1.png');
+  const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/e9a2f146-8f3f-4163-ba4f-dc10d2f84ccd.png');
   const [position, setPosition] = React.useState('Engineer');
   const [mobileStr, setMobileString] = React.useState(`<b style="color:rgb(7,55,99)">M </b><font color="#666666">${mobile}</font>
   <b style="color:rgb(7,55,99)"> </b><span style="color:rgb(7,55,99)">|</span>`);
   
   const template = `<div style="font-family:Arial,Helvetica,sans-serif">
   <div dir="ltr">
-     <font style="font-size:18px;" color="#073763" size="4"><b>${enName} </b>${chName}</font><br>
-     <font color="#3d85c6" style="font-size: 13px;"> ${companyName} | ${position}<br><br></font>
+     <font style="font-size:12px;" color="#073763"><b>${enName} </b>${chName}</font><br>
+     <font color="#3d85c6" style="font-size: 10px;"> ${companyName} | ${position}<br><br></font>
   </div>
-  <div style="font-size: 13px;">${mobileStr}<b style="color:rgb(7,55,99)"> T </b>
+  <div style="font-size: 10px;">${mobileStr}<b style="color:rgb(7,55,99)"> T </b>
      <font color="#666666">${telephone}</font><font color="#444444">&nbsp;</font><span style="color:rgb(7,55,99)">|</span><b style="color:rgb(7,55,99)"> E </b><font color="#666666">${email}</font><br>
      <b style="color:rgb(7,55,99)">Follow us : </b><a href="https://www.m17.asia/" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.m17.asia/&amp;source=gmail&amp;ust=1589363511983000&amp;usg=AFQjCNHQiHJ6lxRFkz44RyIixkuEyj-27w">
      <font color="#3d85c6">M17 Entertainment</font></a>
   </div>
-  <div><font color="#000000"><img src="${companyLogo}" width="420" height="70" class="CToWUd"></font><br><font color="#000000"><b><span lang="EN-US" style="font-size:18px">Empower Artists. Entertain the World.</span></b></font><br></div>
   <div>
-     <br>
-     <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size: 10px;">
-        <span style="color:#666666;"><span>本信件及附件內容可能為機密性資料，若您並非被指定之收信人或在任何原因未經授權的情形之下收到本信件，請勿揭曉本信件內容於任何人，並請告知原發信人，以及請從您的電腦刪除此信件和任何已列印的文件。謝謝您的合作。</span>
-     </p>
-     <p class="MsoNormal" style="margin:0cm 0cm 0.0001pt;font-size: 10px;"><span style="color:#666666;"><span lang="EN-US" style="border:1pt none windowtext;padding:0cm;">
+    <img src="${companyLogo}" width="252" height="42" class="CToWUd">
+  </div>
+  <div style="font-size: 10px;">
+     <font color="#999999">
+        <span style="color:#999999;"><span>本信件及附件內容可能為機密性資料，若您並非被指定之收信人或在任何原因未經授權的情形之下收到本信件，請勿揭曉本信件內容於任何人，並請告知原發信人，以及請從您的電腦刪除此信件和任何已列印的文件。謝謝您的合作。</span>
+     </font>
+     <font color="#999999">
+        <span style="color:#999999;"><span lang="EN-US" style="border:1pt none windowtext;padding:0cm;">
         CONFIDENTIALITY NOTICE:This electronic message and any attachments may be confidential. If you are not the intended recipient, please do not disclose the contents to anyone,and notify the sender by e-mail; delete the message and destroy all printed hard copies. Thank you for your cooperation.
         </span>
-     </p>
+     </font>
   </div>
 </div>`;
   function onDataChange(e: any) {
@@ -99,7 +101,7 @@ const Email: React.FC = () => {
         setCompanyLogo('https://cdn.17app.co/e9a2f146-8f3f-4163-ba4f-dc10d2f84ccd.png');
         break;
       case 'TW':
-        setCompanyName('17LIVE Taiwan');
+        setCompanyName('17LIVE');
         setCompanyLogo('https://cdn.17app.co/cd4ca6e5-36d4-435b-9e8c-b74820a9ef0b.png');
         break;
       case 'JP':
@@ -211,7 +213,7 @@ const Email: React.FC = () => {
               onChange={onOrgChange}
             >
               <MenuItem value="HQ">HQ</MenuItem>
-              <MenuItem value="TW">17LIVE Taiwan</MenuItem>
+              <MenuItem value="TW">17LIVE</MenuItem>
               <MenuItem value="JP">17LIVE Japan</MenuItem>
               <MenuItem value="US">17LIVE US</MenuItem>
               <MenuItem value="HandsUP">HandsUP</MenuItem>
