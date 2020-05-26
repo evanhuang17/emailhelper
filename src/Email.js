@@ -205,7 +205,7 @@ const Email: React.FC = () => {
         </div>
         <div className="item-margin">
           <FormControl fullWidth={true}>
-            <InputLabel id="organization-label">公司名稱 Comany Name</InputLabel>
+            <InputLabel id="organization-label">公司名稱 Company Name</InputLabel>
             <Select
               labelId="organization-label"
               id="organization"
