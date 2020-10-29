@@ -49,7 +49,7 @@ const Email: React.FC = () => {
      <font color="#3d85c6">17LIVE</font></a>
   </div>
   <div>
-    <img src="${companyLogo}" width="252" height="42" class="CToWUd">
+    <img src="${companyLogo}" height="42" class="CToWUd">
   </div>
   <div style="font-size: 8px;transform: scale(0.8);transform-origin: 0 0;">
      <font color="#999999">
