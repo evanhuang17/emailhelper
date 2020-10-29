@@ -211,7 +211,7 @@ const Email: React.FC = () => {
               <MenuItem value="TW">17LIVE</MenuItem>
               <MenuItem value="JP">17LIVE Japan</MenuItem>
               <MenuItem value="US">17LIVE US</MenuItem>
-              {/* <MenuItem value="HandsUP">HandsUP</MenuItem> */}
+              <MenuItem value="HandsUP">HandsUP</MenuItem>
               <MenuItem value="Wave">Wave</MenuItem>
               <MenuItem value="Unicorn">Unicorn Entertainment</MenuItem>
               {/* <MenuItem value="17MyMai">17MyMai</MenuItem> */}
