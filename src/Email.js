@@ -30,7 +30,7 @@ const Email: React.FC = () => {
   const [chName, setChName] = React.useState("王小明");
   const [mobile, setMobile] = React.useState("+886-909-090-999");
   const [email, setEmail] = React.useState("xiaomingwang@17.live");
-  const [telephone, setTelephone] = React.useState("+866-2-2327-8989 #123");
+  const [telephone, setTelephone] = React.useState("+886-2-2327-8989 #123");
   const [organization, setOrganization] = React.useState('HQ');
   const [companyName, setCompanyName] = React.useState('17LIVE');
   const [companyLogo, setCompanyLogo] = React.useState('https://cdn.17app.co/0baab570-cff0-4942-932b-da4cd28dad65.png');
