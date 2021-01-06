@@ -54,7 +54,11 @@ const Email: React.FC = () => {
   <div style="font-size: 8px;transform: scale(0.8);transform-origin: 0 0;">
      <font color="#999999">
         <div style="color:#999999;"><span style="border:1pt none windowtext;padding:0cm;">
-        本信件及附件內容可能為機密性資料，若您並非被指定之收信人或在任何原因未經授權的情形之下收到本信件，請勿揭曉本信件內容於任何人，並請告知原發信人，以及請從您的電腦刪除此信件和任何已列印的文件。謝謝您的合作。</div>
+        本信件及附件內容可能為機密性資料，若您並非被指定之收信人或在任何原因未經授權的情形之下收到本信件，請勿揭曉本信件內容於任何人，並請告知原發信人，以及請從您的電腦刪除此信件和任何已列印的文件。謝謝您的合作。
+        </div>
+        <div style="color:#999999;"><span lang="EN-US" style="border:1pt none windowtext;padding:0cm;">
+        秘密保持に関するご注意:このメールおよび添付ファイルには、秘密情報や個人情報が含まれている場合があります。本メールがご自身宛でない場合、内容を誰にも開示せず、お手元のメールや印刷物を削除又は破棄し、誤って届いた旨を発信者宛にご通知下さいますようお願いいたします。
+        </div>
         <div style="color:#999999;"><span lang="EN-US" style="border:1pt none windowtext;padding:0cm;">
         CONFIDENTIALITY NOTICE:This electronic message and any attachments may be confidential. If you are not the intended recipient, please do not disclose the contents to anyone,and notify the sender by e-mail; delete the message and destroy all printed hard copies. Thank you for your cooperation.
         </div>
