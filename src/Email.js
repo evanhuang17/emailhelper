@@ -45,7 +45,7 @@ const Email: React.FC = () => {
   </div>
   <div style="font-size: 10px;">${mobileStr}<b style="color:rgb(0,0,0)"> T </b>
      <font color="#000000">${telephone}</font><font color="#000000">&nbsp;</font><span style="color:rgb(0,0,0)">|</span><b style="color:rgb(0,0,0)"> E </b><font color="#000000">${email}</font><br>
-     <b style="color:rgb(0,0,0)">Follow us : </b><a href="https://www.17live.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.m17.asia/&amp;source=gmail&amp;ust=1589363511983000&amp;usg=AFQjCNHQiHJ6lxRFkz44RyIixkuEyj-27w">
+     <b style="color:rgb(0,0,0)">official site: </b><a href="https://www.17live.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.m17.asia/&amp;source=gmail&amp;ust=1589363511983000&amp;usg=AFQjCNHQiHJ6lxRFkz44RyIixkuEyj-27w">
      <font color="#000000">17LIVE</font></a>
   </div>
   <div>
