@@ -26,6 +26,7 @@ const Email: React.FC = () => {
     }),
   );
   const classes = useStyles();
+  const [website, setWebsite] = React.useState("https://tw.17.live");
   const [enName, setEnName] = React.useState("Xiaoming Wang");
   const [chName, setChName] = React.useState("王小明");
   const [mobile, setMobile] = React.useState("+886-909-090-999");
@@ -45,7 +46,7 @@ const Email: React.FC = () => {
   </div>
   <div style="font-size: 10px;">${mobileStr}<b style="color:rgb(0,0,0)"> T </b>
      <font color="#000000">${telephone}</font><font color="#000000">&nbsp;</font><span style="color:rgb(0,0,0)">|</span><b style="color:rgb(0,0,0)"> E </b><font color="#000000">${email}</font><br>
-     <b style="color:rgb(0,0,0)">official site: </b><a href="https://www.17live.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.m17.asia/&amp;source=gmail&amp;ust=1589363511983000&amp;usg=AFQjCNHQiHJ6lxRFkz44RyIixkuEyj-27w">
+     <b style="color:rgb(0,0,0)">official site: </b><a href="${website}" target="_blank">
      <font color="#000000">17LIVE</font></a>
   </div>
   <div>
@@ -102,34 +103,47 @@ const Email: React.FC = () => {
       case 'HQ':
         setCompanyName('17LIVE Services Inc.');
         setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://about.17.live');
         break;
       case 'TW':
         setCompanyName('17LIVE');
         setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://tw.17.live');
         break;
       case 'JP':
         setCompanyName('17LIVE Japan');
         setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://jp.17.live');
+        break;
+      case 'HK':
+        setCompanyName('17LIVE HK');
+        setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://hk.17.live');
         break;
       case 'US':
         setCompanyName('17LIVE US');
         setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://www.letslivit.com/');
         break;
       case 'Wave':
         setCompanyName('Wave');
         setCompanyLogo('https://cdn.17app.co/1cd5dcec-16b7-4cd0-bba1-a848e94717a4.png');
+        setWebsite('https://www.wave.com.tw/');
         break;
       case 'HandsUP':
         setCompanyName('HandsUP');
         setCompanyLogo('https://cdn.17app.co/b59ac6a6-6470-4a4b-83cd-e1ae3e3cb35f.png');
+        setWebsite('https://tw.handsup.shop/home.html');
         break;
       case 'MeMe':
         setCompanyName('MeMe');
         setCompanyLogo('https://cdn.17app.co/777284ed-e512-4c40-bd96-6343c6fbd356.png');
+        setWebsite('https://www.meme.chat/');
         break;
       default:
         setCompanyName('17LIVE');
         setCompanyLogo('https://cdn.17app.co/ae338e12-d4d3-4c81-9f76-11c61c23c698.png');
+        setWebsite('https://about.17.live');
         break;
     }
   };
@@ -210,6 +224,7 @@ const Email: React.FC = () => {
               <MenuItem value="HQ">HQ</MenuItem>
               <MenuItem value="TW">17LIVE</MenuItem>
               <MenuItem value="JP">17LIVE Japan</MenuItem>
+              <MenuItem value="HK">17LIVE HK</MenuItem>
               <MenuItem value="US">17LIVE US</MenuItem>
               <MenuItem value="HandsUP">HandsUP</MenuItem>
               <MenuItem value="Wave">Wave</MenuItem>
